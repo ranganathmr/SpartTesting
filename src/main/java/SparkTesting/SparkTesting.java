@@ -42,7 +42,7 @@ public class SparkTesting implements Serializable {
 	    JavaSparkContext jsc = new JavaSparkContext(sparkConf);
 	    
 	    long time = System.currentTimeMillis();
-	    JavaRDD<String> stringRdd = jsc.textFile("/Users/rmysoreradhakrishna/Downloads/SparkTesting/Iris.txt");
+	    JavaRDD<String> stringRdd = jsc.textFile("./testData/Iris.txt");
 	    
 	    JavaRDD<IrisRecord> data = stringRdd.map(new Function<String, IrisRecord>() {
 
